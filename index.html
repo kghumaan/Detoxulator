@@ -1,0 +1,60 @@
+<DOCTYPE! html>
+<html>
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- THIS IS JUST A NICE LOOKING FONT -->
+      <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
+      <!-- CSS -->
+
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+      <script type="text/javascript" src="index.js"></script>
+      <link rel="stylesheet" href="jquery-ui.min.css">
+      <script src="external/jquery/jquery.js"></script>
+      <script src="jquery-ui.min.js"></script>
+      <title>Detoxulator</title>
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $(".centered").fadeIn(2500);
+          $(".formTitle").fadeIn(10);
+          $(".opener1").delay(2000).fadeIn(3000);
+          $(".opener1").fadeOut(1000);
+          $(".question1").delay(6000).fadeIn(2000);question1
+          $("form").delay(8000).animate({height: "+=25%"});
+          $("#send").click(function(){
+            ("#question1").slideUp("slow");
+          });
+          // $("#input").datepicker({
+          //     dateFormat: 'yy-mm-dd'
+          // )};
+          $( "#date" ).datepicker();
+        });
+        var date = $('#input').datepicker({
+          dateFormat: 'dd-mm-yy' }).val();
+          
+      </script>
+   </head>
+   <body>
+    <form action="" method="POST" class="centered">
+
+                        <div class="formTitle">Welcome</div>
+                        <div class="opener1">To Ares Management</div>
+                          <div class="question1" id="question1">Blah Blah Blah test......
+                            <div class="date">
+                              <div class="dateTitle">
+                                  <div style="padding-right: 5%;">
+                                    Date: 
+                                  </div>
+                                <input type="date" id="input"/>
+                                <br><input id="send" type="button" /><br>
+                                <input type="text" name="date" id="date">
+                              </div>
+                            </div>
+                          </div>
+                        
+                        <!--<textarea type="text" id="task" name="field6" rows="1" placeholder="Task that needs completion, let us know how we can help!*"></textarea>
+
+                  <input name="next" type="button" value="Next &#x21fe;" class="next" onClick="showBack();"/>-->
+      </form>
+   </body>
+</html>

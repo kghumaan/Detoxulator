@@ -1,0 +1,152 @@
+body{
+  background: white;
+  font-family: 'Raleway', sans-serif;
+}
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 40%;
+  display: none;
+  /*margin: 0 auto;*/
+  border-style: solid;
+  border-radius: 25px;
+  border-width: .1px;
+  border-color: black;
+}
+form{
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+  position: fixed;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 80px #000
+}
+.formTitle{
+  color: #000000;
+  display: none;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 220%;
+  font-family: 'Raleway', sans-serif;
+}
+.opener1,
+.opener2{
+  color: #000000;
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-size: 170%;
+  font-family: 'Raleway', sans-serif;
+}
+.question1,
+.question2,
+question3{
+  color: #000000;
+  display: none;
+  position: relative;
+  left: 50%;
+  top: 18%;
+  transform: translate(-50%, -50%);
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-size: 170%;
+  font-family: 'Raleway', sans-serif;  
+}
+.date{
+  color: #000000;
+  position: relative;
+  top: 20vh;
+  left: 50%;
+  margin: 900px 0 0 0;
+  transform: translate(-50%, 0%);
+  margin: 0 0 10px 0;
+  font-family: 'Raleway', sans-serif; 
+}
+input[type=date] {
+  height: 14%;
+  margin: 0 auto;
+  width: 26%;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: black;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  padding-left: 3.2vw;
+  color: white;
+
+  &::-webkit-datetime-edit-month-field {
+    color: white;
+  }
+  &::-webkit-datetime-edit-day-field {
+    color: white;
+  }
+  &::-webkit-datetime-edit-year-field {
+    color: white;
+  }
+  
+  &::-webkit-clear-button {
+    font-size: 18px;
+    height: 30px;
+    position: relative;
+    right: 5px;
+    margin-right: 4px;
+  }
+  &::-webkit-inner-spin-button {
+    height: 30px;
+  }
+  &::-webkit-calendar-picker-indicator {
+    font-size: 18px;
+    
+        
+    &:hover {
+      background-color: lighten(#2f2f2f,40%);
+      color: darken(#fff, 10%);
+      cursor: pointer;
+    }
+    &:active {
+      color: blue;
+    }
+  }
+}
+
+.dateTitle{
+  color: #000000;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 0 40px 0;
+  text-align: center;
+  font-family: 'Raleway', sans-serif; 
+}
+/*#handSlideAnimation{
+  animation: handSlide 2s 1000;
+  position: relative;
+  top: -40px;
+  color: white;
+}
+
+@keyframes handSlide{
+  0%{
+    transform: translate3d(0px, 0%, 0px);
+  }
+  50%{
+    transform: translate3d(0px, 10px, 0px);
+  }
+  100%{
+    transfor: translate3d(0px, 0%, 0px);
+  }
+}*/
+/* Form CSS */
