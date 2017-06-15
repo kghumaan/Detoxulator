@@ -10,7 +10,6 @@ body{
   transform: translate(-50%, -50%);
   width: 60%;
   height: 40%;
-  display: none;
   /*margin: 0 auto;*/
   border-style: solid;
   border-radius: 25px;
@@ -27,7 +26,6 @@ form{
 }
 .formTitle{
   color: #000000;
-  display: none;
   margin: 10px 0 10px 0;
   text-align: center;
   font-weight: bold;
@@ -37,7 +35,6 @@ form{
 .opener1,
 .opener2{
   color: #000000;
-  display: none;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -51,7 +48,6 @@ form{
 .question2,
 question3{
   color: #000000;
-  display: none;
   position: relative;
   left: 50%;
   top: 18%;
@@ -131,22 +127,3 @@ input[type=date] {
   text-align: center;
   font-family: 'Raleway', sans-serif; 
 }
-/*#handSlideAnimation{
-  animation: handSlide 2s 1000;
-  position: relative;
-  top: -40px;
-  color: white;
-}
-
-@keyframes handSlide{
-  0%{
-    transform: translate3d(0px, 0%, 0px);
-  }
-  50%{
-    transform: translate3d(0px, 10px, 0px);
-  }
-  100%{
-    transfor: translate3d(0px, 0%, 0px);
-  }
-}*/
-/* Form CSS */
