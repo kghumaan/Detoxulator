@@ -21,7 +21,7 @@
         <li class="slide" id="slide8"><div id="bg"><img src="Slide7.png" alt="Slide 8" id="slides"></div></li>
         <li class="slide" id="slide9"><div id="bg"><img src="Slide8.png" alt="Slide 9" id="slides"></div></li>
       </ul>
-      <button class="controls" id="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+      <button class="controls" id="pause">Pause</button>
       <!-- JS -->
       <script>
         var slides = document.querySelectorAll('#slides .slide');
@@ -36,20 +36,25 @@
 
         var playing = true;
         var pauseButton = document.getElementById('pause');
+        var allSlides = document.getElementById('slides');
+
+
+        //Start and Pause functions
 
         function pauseSlideshow(){
-          pauseButton.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
+          pauseButton.innerHTML = 'Resume';
           playing = false;
           clearInterval(slideInterval);
         }
 
         function playSlideshow(){
-          pauseButton.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
+          pauseButton.innerHTML = 'Pause';
           playing = true;
           slideInterval = setInterval(nextSlide,5000);
         }
+        
 
-        var allSlides = document.getElementById('slides');
+        //Clicks - start and pause
 
         allSlides.onclick = function(){
           if(playing){ pauseSlideshow(); }
