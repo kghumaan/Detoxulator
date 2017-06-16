@@ -11,15 +11,15 @@
    </head>
    <body>
       <ul id="slides">
-        <li class="slide showing" id="slide1"><div id="bg"><img src="Slide0.png" alt="Slide 1"></div></li>
-        <li class="slide" id="slide2"><div id="bg"><img src="Slide1.png" alt="Slide 2"></div></li>
-        <li class="slide" id="slide3"><div id="bg"><img src="Slide2.png" alt="Slide 3"></div></li>
-        <li class="slide" id="slide4"><div id="bg"><img src="Slide3.png" alt="Slide 4"></div></li>
-        <li class="slide" id="slide5"><div id="bg"><img src="Slide4.png" alt="Slide 5"></div></li>
-        <li class="slide" id="slide6"><div id="bg"><img src="Slide5.png" alt="Slide 6"></div></li>
-        <li class="slide" id="slide7"><div id="bg"><img src="Slide6.png" alt="Slide 7"></div></li>
-        <li class="slide" id="slide8"><div id="bg"><img src="Slide7.png" alt="Slide 8"></div></li>
-        <li class="slide" id="slide9"><div id="bg"><img src="Slide8.png" alt="Slide 9"></div></li>
+        <li class="slide showing" id="slide1"><div id="bg"><img src="Slide0.png" alt="Slide 1" id="slides"></div></li>
+        <li class="slide" id="slide2"><div id="bg"><img src="Slide1.png" alt="Slide 2" id="slides"></div></li>
+        <li class="slide" id="slide3"><div id="bg"><img src="Slide2.png" alt="Slide 3" id="slides"></div></li>
+        <li class="slide" id="slide4"><div id="bg"><img src="Slide3.png" alt="Slide 4" id="slides"></div></li>
+        <li class="slide" id="slide5"><div id="bg"><img src="Slide4.png" alt="Slide 5" id="slides"></div></li>
+        <li class="slide" id="slide6"><div id="bg"><img src="Slide5.png" alt="Slide 6" id="slides"></div></li>
+        <li class="slide" id="slide7"><div id="bg"><img src="Slide6.png" alt="Slide 7" id="slides"></div></li>
+        <li class="slide" id="slide8"><div id="bg"><img src="Slide7.png" alt="Slide 8" id="slides"></div></li>
+        <li class="slide" id="slide9"><div id="bg"><img src="Slide8.png" alt="Slide 9" id="slides"></div></li>
       </ul>
       <button class="controls" id="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
       <!-- JS -->
@@ -48,6 +48,13 @@
           playing = true;
           slideInterval = setInterval(nextSlide,5000);
         }
+
+        var allSlides = document.getElementById('slides');
+
+        allSlides.onclick = function(){
+          if(playing){ pauseSlideshow(); }
+          else{ playSlideshow(); }
+        };
 
         pauseButton.onclick = function(){
           if(playing){ pauseSlideshow(); }
