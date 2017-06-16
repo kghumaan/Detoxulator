@@ -7,22 +7,26 @@
       <!-- Font Icons -->
       <link rel="stylesheet" href="icons/css/font-awesome.min.css">
 
-      <title>Widget1.0</title>
+      <!--<title>Widget1.0</title>-->
    </head>
    <body>
       <ul id="slides">
-        <li class="slide showing" id="slide1"></li>
-        <li class="slide" id="slide2"></li>
-        <li class="slide" id="slide3"></li>
-        <li class="slide" id="slide4"></li>
-        <li class="slide" id="slide5"></li>
+        <li class="slide showing" id="slide1"><div id="bg"><img src="Slide0.png" alt="Slide 1"></div></li>
+        <li class="slide" id="slide2"><div id="bg"><img src="Slide1.png" alt="Slide 2"></div></li>
+        <li class="slide" id="slide3"><div id="bg"><img src="Slide2.png" alt="Slide 3"></div></li>
+        <li class="slide" id="slide4"><div id="bg"><img src="Slide3.png" alt="Slide 4"></div></li>
+        <li class="slide" id="slide5"><div id="bg"><img src="Slide4.png" alt="Slide 5"></div></li>
+        <li class="slide" id="slide6"><div id="bg"><img src="Slide5.png" alt="Slide 6"></div></li>
+        <li class="slide" id="slide7"><div id="bg"><img src="Slide6.png" alt="Slide 7"></div></li>
+        <li class="slide" id="slide8"><div id="bg"><img src="Slide7.png" alt="Slide 8"></div></li>
+        <li class="slide" id="slide9"><div id="bg"><img src="Slide8.png" alt="Slide 9"></div></li>
       </ul>
       <button class="controls" id="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
       <!-- JS -->
       <script>
         var slides = document.querySelectorAll('#slides .slide');
         var currentSlide = 0;
-        var slideInterval = setInterval(nextSlide,4000);
+        var slideInterval = setInterval(nextSlide,5000);
 
         function nextSlide(){
           slides[currentSlide].className = 'slide';
@@ -42,7 +46,7 @@
         function playSlideshow(){
           pauseButton.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
           playing = true;
-          slideInterval = setInterval(nextSlide,4000);
+          slideInterval = setInterval(nextSlide,5000);
         }
 
         pauseButton.onclick = function(){
