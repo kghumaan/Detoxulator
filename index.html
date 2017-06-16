@@ -1,11 +1,14 @@
 <DOCTYPE! html>
    <head>
+      <!-- FONT -->
       <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
       <!-- CSS -->
-
       <link rel="stylesheet" type="text/css" href="style.css"/>
+      <!-- Font Icons -->
+      <link rel="stylesheet" href="icons/css/font-awesome.min.css">
+
       <title>Widget1.0</title>
-      <!-- JS!!! -->
+      <!-- JS -->
       <script>
       var slides = document.querySelectorAll('#slides .slide');
       var currentSlide = 0;
@@ -41,11 +44,12 @@
    <body>
       <ul id="slides">
         <li class="slide showing" id="slide1">Slide 1</li>
-        <li class="slide2" id="slide2">Slide 2</li>
+        <li class="slide" id="slide2">Slide 2</li>
         <li class="slide" id="slide3">Slide 3</li>
         <li class="slide" id="slide4">Slide 4</li>
         <li class="slide" id="slide5">Slide 5</li>
       </ul>
-      <button class="controls" id="pause">Pause</button>
+      <button class="controls" id="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+      <i class="fa fa-pause" aria-hidden="true"></i>play<i class="fa fa-pause" aria-hidden="true"></i>
    </body>
 </html>
