@@ -16,34 +16,6 @@ body{
   border-width: .1px;
   border-color: black;
 }
-form{
-  font-family: 'Raleway', sans-serif;
-  margin: 0 auto;
-  position: fixed;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 80px #000
-}
-.formTitle{
-  color: #000000;
-  margin: 10px 0 10px 0;
-  text-align: center;
-  font-weight: bold;
-  font-size: 220%;
-  font-family: 'Raleway', sans-serif;
-}
-.opener1,
-.opener2{
-  color: #000000;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0 0 10px 0;
-  text-align: center;
-  font-size: 170%;
-  font-family: 'Raleway', sans-serif;
-}
 .question1,
 .question2,
 question3{
@@ -178,17 +150,27 @@ just for appearance; change whatever you want
 }
 
 .slide:nth-of-type(1){
-	background: red;
+	background: url(Slide0.png) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 .slide:nth-of-type(2){
-	background: orange;
+	background: url(Slide1.png) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 .slide:nth-of-type(3){
-	background: green;
+	background: url(Slide2.png) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 .slide:nth-of-type(4){
-	background: blue;
+	background: url(Slide3.png) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 .slide:nth-of-type(5){
-	background: purple;
+	background: url(Slide4.png) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
