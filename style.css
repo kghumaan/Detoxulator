@@ -45,8 +45,8 @@ Buttons appearance
 */
 .back{
     position: fixed;
-    top: 3%;
-    right: 10%;
+    top: 2%;
+    right: 12%;
     z-index: 3;
     outline: none;
     background-color: silver;
@@ -55,11 +55,15 @@ Buttons appearance
     border: 1px solid white;
     color: white;
     box-shadow: 0 3px 0 white;
+    width: .8em; 
+    height: 1em; 
+    padding: 2% 3% 2% 3%;
+    
 }
 .controls{
     position: fixed;
     top: 2%;
-    right: 10%;
+    right: 4%;
     z-index: 3;
     outline: none;
     background-color: silver;
@@ -68,11 +72,14 @@ Buttons appearance
     border: 1px solid white;
     color: white;
     box-shadow: 0 3px 0 white;
+    width: .8em; 
+    height: 1em; 
+    padding: 2% 3% 2% 3%;
 }
 .forward{
     position: fixed;
-    top: 3%;
-    right: 1%;
+    top: 2%;
+    right: 2%;
     z-index: 3;
     outline: none;
     background-color: silver;
@@ -81,8 +88,13 @@ Buttons appearance
     border: 1px solid white;
     color: white;
     box-shadow: 0 3px 0 white;
+    width: .8em; 
+    height: 1em; 
+    padding: 2% 3% 2% 3%;
 }
-.controls:active {
+.controls:active,
+.forward:active,
+.back:active {
   transform: translateY(2px);
   box-shadow: 0 1px 0 white;
 }
