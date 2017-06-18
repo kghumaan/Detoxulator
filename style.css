@@ -15,14 +15,14 @@ essential styles:
 these make the slideshow work
 */
 #slides{
-	position: relative;
+	position: absolute;
 	height: 100%;
 	padding: 0px;
 	list-style-type: none;
 }
 
 .slide{
-	position: absolute;
+	position: relative;
 	left: 0px;
 	top: 0px;
 	width: 100%;
@@ -43,37 +43,11 @@ these make the slideshow work
 /*
 Buttons appearance
 */
-.back{
-    position: fixed;
-    top: 2%;
-    right: 13%;
-    z-index: 3;
-    outline: none;
-    background-color: #00498A;
-    font-size: 80%;
-    border-radius: 5%;
-    border: 1px solid #F48229;
-    box-shadow: 0 2px 0 #F48229;
-    padding: 1% 1% 1% 1%;
-    
-}
-.controls{
-    position: fixed;
-    top: 2%;
-    right: 4.9%;
-    z-index: 3;
-    outline: none;
-    background-color: #00498A;
-    font-size: 80%;
-    border-radius: 5%;
-    border: 1px solid #F48229;
-    box-shadow: 0 2px 0 #F48229;
-    padding: 1% 3% 1% 3%;
-}
+.back,
+.controls,
 .forward{
     position: fixed;
     top: 2%;
-    right: 1%;
     z-index: 3;
     outline: none;
     background-color: #00498A;
@@ -81,13 +55,24 @@ Buttons appearance
     border-radius: 5%;
     border: 1px solid #F48229;
     box-shadow: 0 2px 0 #F48229;
-    padding: 1% 1% 1% 1%;
 }
 .controls:active,
 .forward:active,
 .back:active {
   transform: translateY(1px);
   box-shadow: 0 1px 0 silver;
+}
+.back{
+    padding: 1% 1% 1% 1%;
+    right: 13%;
+}
+.controls{
+    padding: 1% 3% 1% 3%;
+    right: 4.9%;
+}
+.forward{
+    padding: 1% 1% 1% 1%;
+    right: 1%;
 }
 /*
 Slides appearance
@@ -154,4 +139,15 @@ Slides appearance
   min-height: 50%;
   max-width: 100vw;
   max-height: 100vh;
+}
+#bg .adobe {
+  position: absolute; 
+  bottom: 5%; 
+  left: 5%; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  max-width: 100vw;
+  max-height: 100vh;
+  z-index: 5;
 }
