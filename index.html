@@ -27,9 +27,17 @@
           <div id="bg">
             <img src="Slide3.png" alt="Slide 4" id="slides">
           </div>
-          <a href="https://google.com">
-            <img src="AdobeIcon.png" alt="Adobe Icon" id="adobe">
-          </a>
+          <img src="AdobeIcon.png" alt="Adobe Icon" id="adobe">
+            <!-- The Modal -->
+            <div id="modal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="Resume.pdf" alt="PDF">
+              </div>
+
+            </div>
         </li>
         <li class="slide" id="slide5">
           <div id="bg">
@@ -77,6 +85,10 @@
         var forwardButton = document.getElementById('forward');
         var allSlides = document.getElementById('slides');
         var Sign = document.getElementById('pausePlayImg');
+
+        var modal = document.getElementById('modal');
+        var adobeIcon = document.getElementById('adobe');
+        var closeButton = document.getElementsByClassName("close")[0];
 
         function nextSlide(){
           slides[currentSlide].className = 'slide';
@@ -134,6 +146,19 @@
         backButton.onclick = function(){
           previousSlide();
         };
+        adobeIcon.onclick = function(){
+          modal.style.display = "block";
+        }
+        // When the user clicks on (x), close the modal
+        closeButton.onclick = function() {
+            modal.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close the modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
       </script>
    </body>
 </html>
