@@ -28,32 +28,42 @@
             <img src="Slide3.png" alt="Slide 4" id="slides">
           </div>
           <img src="AdobeIcon.png" alt="Adobe Icon" id="adobe">
-            <!-- The Modal -->
-            <div id="modal" class="modal">
-
-              <!-- Modal content -->
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <img src="Resume.pdf" alt="PDF">
-              </div>
-
+          <!-- The Modal -->
+          <div id="modal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" style="color:black;">&times;</span>
+              <embed src="KVsResume.pdf" width="100%" height="90%"/>
             </div>
+          </div>
         </li>
         <li class="slide" id="slide5">
           <div id="bg">
             <img src="Slide4.png" alt="Slide 5" id="slides">
           </div>
-          <a href="https://google.com">
-            <img src="AdobeIcon.png" alt="Adobe Icon" id="adobeShorter">
-          </a>
+          <img src="AdobeIcon.png" alt="Adobe Icon" id="adobeShorter">
+          <!-- The Modal -->
+          <div id="modal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" style="color:black;">&times;</span>
+              <embed src="KVsResume.pdf" width="100%" height="90%"/>
+            </div>
+          </div>
         </li>
         <li class="slide" id="slide6">
           <div id="bg">
             <img src="Slide5.png" alt="Slide 6" id="slides">
           </div>
-          <a href="https://google.com">
-            <img src="AdobeIcon.png" alt="Adobe Icon" id="adobe">
-          </a>
+          <img src="AdobeIcon.png" alt="Adobe Icon" id="adobe">
+          <!-- The Modal -->
+          <div id="modal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" style="color:black;">&times;</span>
+              <embed src="KVsResume.pdf" width="100%" height="90%"/>
+            </div>
+          </div>
         </li>
         <li class="slide" id="slide7">
           <div id="bg">
@@ -80,6 +90,7 @@
         var currentSlide = 0;
         var slideInterval = setInterval(nextSlide,6000);
         var playing = true;
+        var modalOpen = false;
         var pauseButton = document.getElementById('pause');
         var backButton = document.getElementById('back');
         var forwardButton = document.getElementById('forward');
@@ -88,23 +99,36 @@
 
         var modal = document.getElementById('modal');
         var adobeIcon = document.getElementById('adobe');
+        var adobeIconS = document.getElementById('adobeShorter')
         var closeButton = document.getElementsByClassName("close")[0];
 
         function nextSlide(){
-          slides[currentSlide].className = 'slide';
-          currentSlide = (currentSlide+1)%slides.length;
-          slides[currentSlide].className = 'slide showing';
-          // Resets interval upon clicking
-          clearInterval(slideInterval);
-          slideInterval = setInterval(nextSlide,6000);
+          if(playing){ 
+            slides[currentSlide].className = 'slide';
+            currentSlide = (currentSlide+1)%slides.length;
+            slides[currentSlide].className = 'slide showing';
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide,6000);
+          } else{
+            slides[currentSlide].className = 'slide';
+            currentSlide = (currentSlide+1)%slides.length;
+            slides[currentSlide].className = 'slide showing';
+            pauseSlideshow();
+        };
         }
         function previousSlide(){
-          slides[currentSlide].className = 'slide';
-          currentSlide = (currentSlide-1)%slides.length;
-          slides[currentSlide].className = 'slide showing';
-          // Resets interval upon clicking
-          clearInterval(slideInterval);
-          slideInterval = setInterval(nextSlide,6000);
+          if(playing){ 
+            slides[currentSlide].className = 'slide';
+            currentSlide = (currentSlide-1)%slides.length;
+            slides[currentSlide].className = 'slide showing';
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide,6000);
+          } else{
+            slides[currentSlide].className = 'slide';
+            currentSlide = (currentSlide-1)%slides.length;
+            slides[currentSlide].className = 'slide showing';
+            pauseSlideshow();
+        };
         }
 
         //Start and Pause functions
@@ -128,7 +152,9 @@
         allSlides.onclick = function(){
           if(playing){ 
             pauseSlideshow(); 
-          } else{ 
+          } else if(modalOpen){ 
+            pauseSlideshow(); 
+          } else{
             playSlideshow();
           }
         };
@@ -148,17 +174,30 @@
         };
         adobeIcon.onclick = function(){
           modal.style.display = "block";
-        }
+          modalOpen = true;
+          clearInterval(slideInterval);
+        };
+        adobeIconS.onclick = function(){
+          modal.style.display = "block";
+          modalOpen = true;
+          clearInterval(slideInterval);
+        };
         // When the user clicks on (x), close the modal
         closeButton.onclick = function() {
-            modal.style.display = "none";
-        }
+          modal.style.display = "none";
+          modalOpen = false;
+          clearInterval(slideInterval);
+          slideInterval = setInterval(nextSlide,6000);
+        };
         // When the user clicks anywhere outside of the modal, close the modal
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
-            }
-        }
+                modalOpen = false;
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide,6000);
+            };
+        };
       </script>
    </body>
 </html>
