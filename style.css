@@ -144,23 +144,19 @@ Slides appearance
   max-width: 100vw;
   max-height: 100vh;
 }
-#adobe {
+#adobe, #adobeShorter {
   position: fixed; 
   bottom: 5%; 
   left: 3%;
   min-width: 10vw;
-  min-height: 50vh;
   max-width: 20vw;
-  max-height: 20vh;
   z-index: 5;
 }
+#adobe{
+  min-height: 50vh;
+  max-height: 20vh;
+}
 #adobeShorter {
-  position: fixed; 
-  bottom: 5%; 
-  left: 3%;
-  min-width: 10vw;
   min-height: 30vh;
-  max-width: 20vw;
   max-height: 40vh;
-  z-index: 5;
 }

@@ -70,7 +70,7 @@
       <script>
         var slides = document.querySelectorAll('#slides .slide');
         var currentSlide = 0;
-        var slideInterval = setInterval(nextSlide,5000);
+        var slideInterval = setInterval(nextSlide,6000);
         var playing = true;
         var pauseButton = document.getElementById('pause');
         var backButton = document.getElementById('back');
@@ -82,11 +82,17 @@
           slides[currentSlide].className = 'slide';
           currentSlide = (currentSlide+1)%slides.length;
           slides[currentSlide].className = 'slide showing';
+          // Resets interval upon clicking
+          clearInterval(slideInterval);
+          slideInterval = setInterval(nextSlide,6000);
         }
         function previousSlide(){
           slides[currentSlide].className = 'slide';
           currentSlide = (currentSlide-1)%slides.length;
           slides[currentSlide].className = 'slide showing';
+          // Resets interval upon clicking
+          clearInterval(slideInterval);
+          slideInterval = setInterval(nextSlide,6000);
         }
 
         //Start and Pause functions
@@ -102,7 +108,7 @@
           // pauseButton.innerHTML = 'Pause';
           Sign.src = "pause.png" 
           playing = true;
-          slideInterval = setInterval(nextSlide,5000);
+          slideInterval = setInterval(nextSlide,6000);
         }
 
         //Clicks - start and pause
