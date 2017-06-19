@@ -3,13 +3,14 @@ body{
   margin: 0 auto;
 }
 a{
-  cursor:pointer;
+  cursor: pointer;
   outline: none;
 }
 p{
   font-size: 120%;
-  color: black;
+  color: #116292;
   text-align: center;
+  font-weight: bold;
 }
 button{
   z-index: 9;
@@ -67,23 +68,45 @@ Buttons appearance
     border-radius: 5%;
     border: 1px solid #F48229;
     box-shadow: 0 2px 0 #F48229;
+    cursor: pointer;
+}
+.share{
+    position: fixed;
+    top: 2%;
+    z-index: 3;
+    outline: none;
+    background-color: #F48229;
+    font-size: 80%;
+    border-radius: 5%;
+    border: 1px solid #00498A;
+    box-shadow: 0 2px 0 #00498A;
+    cursor: pointer;
 }
 .controls:active,
 .forward:active,
-.back:active {
+.back:active{
   transform: translateY(1px);
-  box-shadow: 0 1px 0 silver;
+  box-shadow: 0 1px 0 #F48229;
 }
+.share:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 0 #00498A;
+}
+
 .back{
     padding: 1% 1% 1% 1%;
-    right: 13%;
+    right: 18%;
 }
 .controls{
     padding: 1% 3% 1% 3%;
-    right: 4.9%;
+    right: 9.9%;
 }
 .forward{
     padding: 1% 1% 1% 1%;
+    right: 6%;
+}
+.share{
+    padding: .7% .7% .7% .7%;
     right: 1%;
 }
 /*
