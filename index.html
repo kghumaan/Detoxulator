@@ -36,6 +36,14 @@
               <embed src="KVsResume.pdf" width="100%" height="90%"/>
             </div>
           </div>
+          <!-- Alert Modal -->
+          <div id="alertModal" class="alertModal">
+            <!-- Alert content -->
+            <div class="alert-modal-content">
+              <span class="closeAlert" style="color:black;">&times;</span>
+              <p>YOU STILL THERE??</p>
+            </div>
+          </div>
         </li>
         <li class="slide" id="slide5">
           <div id="bg">
@@ -50,6 +58,15 @@
               <embed src="KVsResume.pdf" width="100%" height="90%"/>
             </div>
           </div>
+          <!-- Alert Modal -->
+          <div id="alertModal2" class="alertModal">
+            <!-- Alert content -->
+            <div class="alert-modal-content">
+              <span class="closeAlert" style="color:black;">&times;</span>
+              <p class="closeMessage">YOU STILL THERE??</p>
+              <button>Yes</button><button>No</button>
+            </div>
+          </div>
         </li>
         <li class="slide" id="slide6">
           <div id="bg">
@@ -62,6 +79,14 @@
             <div class="modal-content">
               <span class="close3" style="color:black;">&times;</span>
               <embed src="KVsResume.pdf" width="100%" height="90%"/>
+            </div>
+          </div>
+          <!-- Alert Modal -->
+          <div id="alertModal3" class="alertModal">
+            <!-- Alert content -->
+            <div class="alert-modal-content">
+              <span class="closeAlert" style="color:black;">&times;</span>
+              <p>YOU STILL THERE??</p>
             </div>
           </div>
         </li>
@@ -102,12 +127,18 @@
         var modal = document.getElementById('modal');
         var modal2 = document.getElementById('modal2');
         var modal3 = document.getElementById('modal3');
+        var alertModal = document.getElementById('alertModal');
+        var alertModal2 = document.getElementById('alertModal2');
+        var alertModal3 = document.getElementById('alertModal3');
         var adobeIcon = document.getElementById('adobe');
         var adobeIconS = document.getElementById('adobeShorter');
         var adobeIcon3 = document.getElementById('adobe3rd');
         var closeButton = document.getElementsByClassName("close")[0];
         var closeButton2 = document.getElementsByClassName("close2")[0];
         var closeButton3 = document.getElementsByClassName("close3")[0];
+        var closeAlertButton = document.getElementsByClassName("closeAlert")[0];
+        var closeAlertButton2 = document.getElementsByClassName("closeAlert2")[0];
+        var closeAlertButton3 = document.getElementsByClassName("closeAlert3")[0];
 
         function nextSlide(){
           if(playing){ 
@@ -141,14 +172,12 @@
         //Start and Pause functions
 
         function pauseSlideshow(){
-          // pauseButton.innerHTML = 'Resume';
           Sign.src = "play.png"
           playing = false;
           clearInterval(slideInterval);
         }
 
         function playSlideshow(){
-          // pauseButton.innerHTML = 'Pause';
           Sign.src = "pause.png" 
           playing = true;
           slideInterval = setInterval(nextSlide,6000);
@@ -182,6 +211,7 @@
         adobeIcon.onclick = function(){
           modal.style.display = "block";
           modalOpen = true;
+          setInterval(alertQuestion,2000);
           pauseSlideshow(); 
           clearInterval(slideInterval);
         };
@@ -215,9 +245,17 @@
           modalOpen = false;
           clearInterval(slideInterval);
         };
-
-
-          modal2.style.display = "none";
+        function alertQuestion(){
+          alertModal.style.display = "block";
+        }
+        function alertQuestion2(){
+          alertModal2.style.display = "block";
+          
+        }
+        function alertQuestion3(){
+          alertModal3.style.display = "block";
+          
+        }
         // When the user clicks anywhere outside of the modal, close the modal
         window.onclick = function(event) {
             if (event.target == modal) {
