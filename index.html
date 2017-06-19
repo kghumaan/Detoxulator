@@ -85,11 +85,10 @@
       <div id="alertModal" class="alertModal">
         <!-- Alert content -->
         <div class="alert-modal-content">
-          <span class="closeAlert" style="color:black;">&times;</span>
-          <p>Are you still there?</p>
+          <p><b>Are you still there?</b></p>
           <br/>
-          <button class="alertQuestion" id="yes">Yes</button>
-          <button class="alertQuestion" id="no">No</button>
+          <button class="alertAnswers" id="yes">Yes</button>
+          <button class="alertAnswers" id="no">No</button>
         </div>
       </div>
       <button class="back" id="back"><img src="left.png" alt="back" style="width: .8em; height: 1em;"></button>
@@ -121,8 +120,9 @@
         var closeButton2 = document.getElementsByClassName("close2")[0];
         var closeButton3 = document.getElementsByClassName("close3")[0];
 
-        
-        var closeAlertButton = document.getElementsByClassName("closeAlert")[0];
+        var yesButton = document.getElementById('yes');
+        var noButton = document.getElementById('no');
+
 
         function nextSlide(){
           if(playing){ 
@@ -130,7 +130,7 @@
             currentSlide = (currentSlide+1)%slides.length;
             slides[currentSlide].className = 'slide showing';
             clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide,6000);
+            slideInterval = setInterval(nextSlide,5000);
           } else{
             slides[currentSlide].className = 'slide';
             currentSlide = (currentSlide+1)%slides.length;
@@ -144,7 +144,7 @@
             currentSlide = (currentSlide-1)%slides.length;
             slides[currentSlide].className = 'slide showing';
             clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide,6000);
+            slideInterval = setInterval(nextSlide,5000);
           } else{
             slides[currentSlide].className = 'slide';
             currentSlide = (currentSlide-1)%slides.length;
@@ -164,7 +164,16 @@
         function playSlideshow(){
           Sign.src = "pause.png" 
           playing = true;
-          slideInterval = setInterval(nextSlide,6000);
+          slideInterval = setInterval(nextSlide,5000);
+        }
+        function closeAndPlaySlideshow(){
+          alertModal.style.display = "none";
+          modal.style.display = "none";
+          modal2.style.display = "none";
+          modal3.style.display = "none";
+          modalOpen = false;
+          clearInterval(slideInterval);
+          playSlideshow();
         }
 
         //Clicks - start and pause
@@ -195,21 +204,21 @@
         adobeIcon.onclick = function(){
           modal.style.display = "block";
           modalOpen = true;
-          setInterval(alertQuestion,2000);
+          setTimeout(alertQuestion,2000);
           pauseSlideshow(); 
           clearInterval(slideInterval);
         };
         adobeIconS.onclick = function(){
           modal2.style.display = "block";
           modalOpen = true;
-          setInterval(alertQuestion,2000);
+          setTimeout(alertQuestion,2000);
           pauseSlideshow(); 
           clearInterval(slideInterval);
         };
         adobeIcon3.onclick = function(){
           modal3.style.display = "block";
           modalOpen = true;
-          setInterval(alertQuestion,2000);
+          setTimeout(alertQuestion,2000);
           pauseSlideshow(); 
           clearInterval(slideInterval);
         };
@@ -233,15 +242,22 @@
         };
         function alertQuestion(){
           alertModal.style.display = "block";
+          setTimeout(closeAndPlaySlideshow,5000);
         }
-        function alertQuestion2(){
-          alertModal2.style.display = "block";
-          
+        yesButton.onclick = function(){
+          alertModal.style.display = "none";
+          setTimeout(alertQuestion,2000);
         }
-        function alertQuestion3(){
-          alertModal3.style.display = "block";
-          
+        noButton.onclick = function(){
+          alertModal.style.display = "none";
+          modal.style.display = "none";
+          modal2.style.display = "none";
+          modal3.style.display = "none";
+          modalOpen = false;
+          clearInterval(slideInterval);
+          playSlideshow();
         }
+
         // When the user clicks anywhere outside of the modal, close the modal
         window.onclick = function(event) {
             if (event.target == modal) {
