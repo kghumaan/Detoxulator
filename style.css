@@ -7,7 +7,7 @@ a{
   outline: none;
 }
 p{
-  font-size: 50%;
+  font-size: 120%;
   color: black;
   text-align: center;
 }
@@ -214,9 +214,7 @@ Slides appearance
 }
 
 /* Alert Close Button */
-.closeAlert,
-.closeAlert2,
-.closeAlert3 {
+.closeAlert{
     color: #aaaaaa;
     float: left;
     font-size: 38px;
@@ -224,12 +222,26 @@ Slides appearance
 }
 
 .closeAlert:hover,
-.closeAlert:focus,
-.closeAlert2:hover,
-.closeAlert2:focus,
-.closeAlert3:hover,
-.closeAlert3:focus {
+.closeAlert:focus{
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+.alertQuestion{
+    /*for vertical align*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /*...*/
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    outline: none;
 }
