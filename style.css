@@ -108,7 +108,9 @@ Slides appearance
   max-width: 100vw;
   max-height: 100vh;
 }
-#adobe, #adobeShorter {
+#adobe, 
+#adobeShorter, 
+#adobe3rd {
   position: fixed; 
   bottom: 5%; 
   left: 3%;
@@ -116,7 +118,8 @@ Slides appearance
   max-width: 20vw;
   z-index: 5;
 }
-#adobe{
+#adobe, 
+#adobe3rd{
   min-height: 50vh;
   max-height: 20vh;
 }
@@ -150,7 +153,9 @@ Slides appearance
 }
 
 /* The Close Button */
-.close {
+.close,
+.close2,
+.close3 {
     color: #aaaaaa;
     float: left;
     font-size: 38px;
@@ -158,7 +163,11 @@ Slides appearance
 }
 
 .close:hover,
-.close:focus {
+.close:focus,
+.close2:hover,
+.close2:focus,
+.close3:hover,
+.close3:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
