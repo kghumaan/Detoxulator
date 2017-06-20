@@ -12,9 +12,15 @@ var pauseButton = document.getElementById('pause');
 var backButton = document.getElementById('back');
 var forwardButton = document.getElementById('forward');
 var shareButton = document.getElementById('share');
-// shareButton.addEventListener("click", function(){
-//     shares.push(currentSlide);
-// }
+
+shareButton.addEventListener("click", function(){
+     share.push(currentSlide);
+});
+
+function sendMail(){
+    var body = share;
+    window.location.href = "mailto:mail@example.org?subject=FromKV request&body="+body;
+}
 
 //PDF Modal
 var Sign = document.getElementById('pausePlayImg');
@@ -65,13 +71,13 @@ function previousSlide(){
 //Start and Pause functions
 
 function pauseSlideshow(){
-    Sign.src = "play.png"
+    Sign.src = "Images/play.png"
     playing = false;
     clearInterval(slideInterval);
 }
 
 function playSlideshow(){
-    Sign.src = "pause.png" 
+    Sign.src = "Images/pause.png" 
     playing = true;
     slideInterval = setInterval(nextSlide,6000);
 }
