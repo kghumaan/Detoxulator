@@ -5,12 +5,16 @@ var slideInterval = setInterval(nextSlide,6000);
 var playing = true;
 var modalOpen = false;
 var present = true;
+var share = [];
 
 //Controls
 var pauseButton = document.getElementById('pause');
 var backButton = document.getElementById('back');
 var forwardButton = document.getElementById('forward');
 var shareButton = document.getElementById('share');
+// shareButton.addEventListener("click", function(){
+//     shares.push(currentSlide);
+// }
 
 //PDF Modal
 var Sign = document.getElementById('pausePlayImg');
@@ -81,7 +85,7 @@ function closeAndPlaySlideshow(){
     playSlideshow();
 }
 
-//Clicks - start and pause
+//Clicks - start, pause, forward, backwards, and share!
 
 allSlides.onclick = function(){
     if(playing){ 
@@ -133,6 +137,7 @@ function modalGetsOpen(){
     clearInterval(slideInterval);
 }
 
+//Alert Answers
 yesButton.onclick = function(){
     alertModal.style.display = "none";
     clearTimeout(resumeSlideshow);
@@ -155,11 +160,12 @@ closeShare.onclick = function(){
     playSlideshow();
 }
 
+
+
 function alertQuestion(){
     alertModal.style.display = "block";
     resumeSlideshow = setTimeout(closeAndPlaySlideshow,8000);
 }
-
 function closeAdobeModals(){
     modal.style.display = "none";
     modal2.style.display = "none";

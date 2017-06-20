@@ -9,22 +9,22 @@
       <ul id="slides">
         <li class="slide showing" id="slide1">
           <div id="bg">
-            <img src="Slide0.png" alt="Slide 1" id="slides">
+            <img src="Slide0.PNG" alt="Slide 1" id="slides">
           </div>
         </li>
         <li class="slide" id="slide2">
           <div id="bg">
-            <img src="Slide1.png" alt="Slide 2" id="slides">
+            <img src="Slide1.PNG" alt="Slide 2" id="slides">
           </div>
         </li>
         <li class="slide" id="slide3">
           <div id="bg">
-            <img src="Slide2.png" alt="Slide 3" id="slides">
+            <img src="Slide2.PNG" alt="Slide 3" id="slides">
           </div>
         </li>
         <li class="slide" id="slide4">
           <div id="bg">
-            <img src="Slide3.png" alt="Slide 4" id="slides">
+            <img src="Slide3.PNG" alt="Slide 4" id="slides">
           </div>
           <img src="AdobeIcon.png" alt="Adobe Icon" onclick="firstModal(),modalGetsOpen()" class="adobe">
           <!-- Adobe Modal -->
@@ -38,7 +38,7 @@
         </li>
         <li class="slide" id="slide5">
           <div id="bg">
-            <img src="Slide4.png" alt="Slide 5" id="slides">
+            <img src="Slide4.PNG" alt="Slide 5" id="slides">
           </div>
           <img src="AdobeIcon.png" alt="Adobe Icon" onclick="secondModal(),modalGetsOpen()" class="adobe">
           <!-- Adobe Modal -->
@@ -52,7 +52,7 @@
         </li>
         <li class="slide" id="slide6">
           <div id="bg">
-            <img src="Slide5.png" alt="Slide 6" id="slides">
+            <img src="Slide5.PNG" alt="Slide 6" id="slides">
           </div>
           <img src="AdobeIcon.png" alt="Adobe Icon" onclick="thirdModal(),modalGetsOpen()" class="adobe">
           <!-- The Modal -->
@@ -66,17 +66,17 @@
         </li>
         <li class="slide" id="slide7">
           <div id="bg">
-            <img src="Slide6.png" alt="Slide 7" id="slides">
+            <img src="Slide6.PNG" alt="Slide 7" id="slides">
           </div>
         </li>
         <li class="slide" id="slide8">
           <div id="bg">
-            <img src="Slide7.png" alt="Slide 8" id="slides">
+            <img src="Slide7.PNG" alt="Slide 8" id="slides">
           </div>
         </li>
         <li class="slide" id="slide9">
           <div id="bg">
-            <img src="Slide8.png" alt="Slide 9" id="slides">
+            <img src="Slide8.PNG" alt="Slide 9" id="slides">
           </div>
         </li>
       </ul>
@@ -97,19 +97,34 @@
           <span class="closeShare" id="closeShare" style="color:black;">&times;</span>
           <br><br>
           <p><b>Share</b></p>
-          <form action="#" method="POST" style="margin-left:12%;margin-right:12%;">
-            <div style="float: left;font-weight: bold;">From:</div> &nbsp; <input class="mailInputs" id="from" type="text" style="width:90%;float:right;"></input>
+          <form action="mailto:kghumaan@umail.iu.edu" method="POST" style="margin-left:12%;margin-right:12%;">
+            <div style="float: left;font-weight: bold;">
+              From:
+            </div> &nbsp; 
+            <input class="mailInputs" id="from" type="text" style="width:90%;float:right;"></input>
             <br><br>
-            <div style="float: left;font-weight: bold;">To:</div> &nbsp; <input class="mailInputs" id="to" type="text" style="width:90%;float:right;"></input>
-            
-            <input class="mailInputs" id="submit" type="submit" style="width:20%;margin: 0 auto;margin-top: 3%; padding:2%;"></input>
+            <div style="float: left;font-weight: bold;">
+              To:
+            </div> &nbsp; 
+            <input class="mailInputs" id="to" type="text" style="width:90%;float:right;"></input>
+            <input class="mailInputs" id="submit" type="submit" value="SUBMIT" style="width:20%;margin: 0 auto;margin-top: 3%; padding:2%;"></input>&nbsp; 
+            <input class="mailInputs" id="submit" type="reset" value="RESET" style="width:20%;margin: 0 auto;margin-top: 3%; padding:2%;"></input>
           </form>
         </div>
       </div>
-      <button class="back" id="back"><img src="left.png" alt="back" style="width: .8em; height: 1em;"></button>
-      <button class="controls" id="pause"><img src="pause.png" id="pausePlayImg" alt="pause" style="width: .8em; height: 1em;"></button>
-      <button class="forward" id="forward"><img src="right.png" alt="forward" style="width: .8em; height: 1em;"></button>
-      <button class="share" id="share"><img src="share.png" alt="share" style="width: 1.8em; height: 1.8em;"></button>
+      <!--CONTROLS-->
+      <button class="back" id="back">
+        <img src="left.png" alt="back" style="width: .8em; height: 1em;">
+      </button>
+      <button class="controls" id="pause">
+        <img src="pause.png" id="pausePlayImg" alt="pause" style="width: .8em; height: 1em;">
+      </button>
+      <button class="forward" id="forward">
+        <img src="right.png" alt="forward" style="width: .8em; height: 1em;">
+      </button>
+      <button class="share" id="share">
+        <img src="share.png" alt="share" style="width: 1.8em; height: 1.8em;">
+      </button>
       <!-- JS -->
       <script src="script.js"></script>
    </body>
