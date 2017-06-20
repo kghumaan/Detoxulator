@@ -10,18 +10,13 @@ var present = true;
 var pauseButton = document.getElementById('pause');
 var backButton = document.getElementById('back');
 var forwardButton = document.getElementById('forward');
+var shareButton = document.getElementById('share');
 
 //PDF Modal
 var Sign = document.getElementById('pausePlayImg');
-var adobeIcon = document.getElementById('adobe');
-var adobeIconS = document.getElementById('adobeShorter');
-var adobeIcon3 = document.getElementById('adobe3rd');
 var modal = document.getElementById('modal');
 var modal2 = document.getElementById('modal2');
 var modal3 = document.getElementById('modal3');
-var closeButton = document.getElementsByClassName("close")[0];
-var closeButton2 = document.getElementsByClassName("close2")[0];
-var closeButton3 = document.getElementsByClassName("close3")[0];
 
 //Alert Modal
 var alertModal = document.getElementById('alertModal');
@@ -30,6 +25,9 @@ var noButton = document.getElementById('no');
 var resumeSlideshow;
 var alertQ;
 
+//Share Modal
+var shareModal = document.getElementById('shareModal');
+var closeShare = document.getElementById('closeShare');
 
 function nextSlide(){
     if(playing){ 
@@ -110,54 +108,30 @@ forwardButton.onclick = function(){
 backButton.onclick = function(){
     previousSlide();
 };
-adobeIcon.onclick = function(){
+shareButton.onclick = function(){
+    shareModal.style.display = "block";
+    alertQ = setTimeout(alertQuestion,10000);
+    pauseSlideshow();
+    clearInterval(slideInterval);
+};
+
+//When Adobe Icons get pressed
+
+function firstModal(){
     modal.style.display = "block";
-    modalOpen = true;
-    alertQ = setTimeout(alertQuestion,10000);
-    pauseSlideshow(); 
-    clearInterval(slideInterval);
-};
-adobeIconS.onclick = function(){
+}
+function secondModal(){
     modal2.style.display = "block";
-    modalOpen = true;
-    alertQ = setTimeout(alertQuestion,10000);
-    pauseSlideshow(); 
-    clearInterval(slideInterval);
-};
-adobeIcon3.onclick = function(){
+}
+function thirdModal(){
     modal3.style.display = "block";
+}
+function modalGetsOpen(){
     modalOpen = true;
     alertQ = setTimeout(alertQuestion,10000);
     pauseSlideshow(); 
     clearInterval(slideInterval);
-};
-// When the user clicks on (x), close the modal
-closeButton.onclick = function() {
-    modal.style.display = "none";
-    modalOpen = false;
-    clearTimeout(resumeSlideshow);
-    clearTimeout(alertQ);
-    clearInterval(slideInterval);
-    console.log("cancle button 1 pressed");
-};
-// When the user clicks on (x), close the modal
-closeButton2.onclick = function() {
-    modal2.style.display = "none";
-    modalOpen = false;
-    clearTimeout(resumeSlideshow);
-    clearTimeout(alertQ);
-    clearInterval(slideInterval);
-    console.log("cancle button 2 pressed");
-};
-// When the user clicks on (x), close the modal
-closeButton3.onclick = function() {
-    modal3.style.display = "none";
-    modalOpen = false;
-    clearTimeout(resumeSlideshow);
-    clearTimeout(alertQ);
-    clearInterval(slideInterval);
-    console.log("cancle button 3 pressed");
-};
+}
 
 yesButton.onclick = function(){
     alertModal.style.display = "none";
@@ -175,10 +149,26 @@ noButton.onclick = function(){
     clearInterval(slideInterval);
     playSlideshow();
 }
+closeShare.onclick = function(){
+    shareModal.style.display = "none";
+    clearInterval(slideInterval);
+    playSlideshow();
+}
 
 function alertQuestion(){
     alertModal.style.display = "block";
     resumeSlideshow = setTimeout(closeAndPlaySlideshow,8000);
+}
+
+function closeAdobeModals(){
+    modal.style.display = "none";
+    modal2.style.display = "none";
+    modal3.style.display = "none";
+    modalOpen = false;
+    clearTimeout(resumeSlideshow);
+    clearTimeout(alertQ);
+    clearInterval(slideInterval);
+    console.log("cancle button pressed");
 }
 
 // When the user clicks anywhere outside of the modal, close the modal
