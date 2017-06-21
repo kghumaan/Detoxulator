@@ -291,6 +291,12 @@ Slides appearance
     float: left;
     font-size: 38px;
 }
+.closeShare:hover,
+.closeShare:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 /*Share Form*/
 #submit{
     outline: none;

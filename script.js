@@ -114,6 +114,7 @@ function nextSlide(){
     slides[currentSlide].className = 'slide showing';
     clearInterval(slideInterval);
     slideInterval = setInterval(nextSlide,6000);
+    console.log(currentSlide);
     } else{
     slides[currentSlide].className = 'slide';
     currentSlide = (currentSlide+1)%slides.length;
@@ -122,19 +123,36 @@ function nextSlide(){
     };  
 }
 function previousSlide(){
-    if(playing){ 
-    slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide-1)%slides.length;
-    slides[currentSlide].className = 'slide showing';
-    clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide,6000);
+    if(currentSlide == 0){
+        if(playing){ 
+            slides[currentSlide].className = 'slide';
+            currentSlide = 8;
+            slides[currentSlide].className = 'slide showing';
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide,6000);
+            console.log(currentSlide);
+            } else{
+            slides[currentSlide].className = 'slide';
+            currentSlide = 8;
+            slides[currentSlide].className = 'slide showing';
+            pauseSlideshow();
+        };
     } else{
-    slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide-1)%slides.length;
-    slides[currentSlide].className = 'slide showing';
-    pauseSlideshow();
+        if(playing){ 
+            slides[currentSlide].className = 'slide';
+            currentSlide = (currentSlide-1)%slides.length;
+            slides[currentSlide].className = 'slide showing';
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide,6000);
+            console.log(currentSlide);
+            } else{
+            slides[currentSlide].className = 'slide';
+            currentSlide = (currentSlide-1)%slides.length;
+            slides[currentSlide].className = 'slide showing';
+            pauseSlideshow();
+        };
+    };    
 };
-}
 
 //Start and Pause functions
 
