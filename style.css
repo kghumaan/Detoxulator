@@ -63,7 +63,6 @@ Buttons appearance
     z-index: 3;
     outline: none;
     background-color: #00498A;
-    font-size: 80%;
     border-radius: 5%;
     border: 1px solid #F48229;
     box-shadow: 0 2px 0 #F48229;
@@ -71,7 +70,7 @@ Buttons appearance
 }
 .share{
     position: fixed;
-    top: 2%;
+    top: 1.8%;
     z-index: 3;
     outline: none;
     background-color: #F48229;
@@ -93,7 +92,7 @@ Buttons appearance
 }
 
 .back{
-    padding: 1% 1% 1% 1%;
+    padding: 1%;
     right: 18%;
 }
 .controls{
@@ -101,11 +100,11 @@ Buttons appearance
     right: 9.9%;
 }
 .forward{
-    padding: 1% 1% 1% 1%;
+    padding: 1%;
     right: 6%;
 }
 .share{
-    padding: .7% .7% .7% .7%;
+    padding: .8%;
     right: 1%;
 }
 /*
