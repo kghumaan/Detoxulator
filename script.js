@@ -114,7 +114,6 @@ function nextSlide(){
     slides[currentSlide].className = 'slide showing';
     clearInterval(slideInterval);
     slideInterval = setInterval(nextSlide,6000);
-    console.log(currentSlide);
     } else{
     slides[currentSlide].className = 'slide';
     currentSlide = (currentSlide+1)%slides.length;
@@ -130,7 +129,6 @@ function previousSlide(){
             slides[currentSlide].className = 'slide showing';
             clearInterval(slideInterval);
             slideInterval = setInterval(nextSlide,6000);
-            console.log(currentSlide);
             } else{
             slides[currentSlide].className = 'slide';
             currentSlide = 8;
@@ -144,7 +142,6 @@ function previousSlide(){
             slides[currentSlide].className = 'slide showing';
             clearInterval(slideInterval);
             slideInterval = setInterval(nextSlide,6000);
-            console.log(currentSlide);
             } else{
             slides[currentSlide].className = 'slide';
             currentSlide = (currentSlide-1)%slides.length;
@@ -172,6 +169,7 @@ function closeAndPlaySlideshow(){
     modal.style.display = "none";
     modal2.style.display = "none";
     modal3.style.display = "none";
+    shareModal.style.display = "none";
     modalOpen = false;
     clearInterval(slideInterval);
     playSlideshow();
@@ -182,7 +180,7 @@ function closeAndPlaySlideshow(){
 allSlides.onclick = function(){
     if(playing){ 
     pauseSlideshow();
-    resumeSlideshow = setTimeout(closeAndPlaySlideshow,13000); 
+    resumeSlideshow = setTimeout(closeAndPlaySlideshow,12000); 
     } else if(modalOpen){ 
     pauseSlideshow(); 
     } else{
@@ -193,7 +191,7 @@ allSlides.onclick = function(){
 pauseButton.onclick = function(){
     if(playing){ 
     pauseSlideshow();
-    resumeSlideshow = setTimeout(closeAndPlaySlideshow,13000);
+    resumeSlideshow = setTimeout(closeAndPlaySlideshow,12000);
     } else{ 
     playSlideshow();
     }
@@ -206,7 +204,7 @@ backButton.onclick = function(){
 };
 shareButton.onclick = function(){
     shareModal.style.display = "block";
-    alertQ = setTimeout(alertQuestion,10000);
+    alertQ = setTimeout(alertQuestion,12000);
     pauseSlideshow();
     clearInterval(slideInterval);
 };
@@ -224,7 +222,7 @@ function thirdModal(){
 }
 function modalGetsOpen(){
     modalOpen = true;
-    alertQ = setTimeout(alertQuestion,10000);
+    alertQ = setTimeout(alertQuestion,12000);
     pauseSlideshow(); 
     clearInterval(slideInterval);
 }
@@ -233,7 +231,7 @@ function modalGetsOpen(){
 yesButton.onclick = function(){
     alertModal.style.display = "none";
     clearTimeout(resumeSlideshow);
-    alertQ = setTimeout(alertQuestion,10000);
+    alertQ = setTimeout(alertQuestion,12000);
     present = true
 }
 noButton.onclick = function(){

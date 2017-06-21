@@ -283,13 +283,27 @@ Slides appearance
     padding: 10px;
     border: 3px solid #00498A;
     width: 60vw;
-    height: 30vh;
+    height: 40vh;
+}
+.mailFromAndTo{
+    float: left;
+    font-weight: bold;
+}
+.mailInputs{
+    width:90%;
+    float:right;
+    margin: 0 auto;
+}
+.mailButtons{
+    width: 20%;
+    margin: 0 auto;
+    padding: 1%;
 }
 /* Alert Close Button */
 .closeShare{
     color: #aaaaaa;
     float: left;
-    font-size: 38px;
+    font-size: 150%;
 }
 .closeShare:hover,
 .closeShare:focus{
