@@ -12,15 +12,83 @@ var pauseButton = document.getElementById('pause');
 var backButton = document.getElementById('back');
 var forwardButton = document.getElementById('forward');
 var shareButton = document.getElementById('share');
+var from = document.getElementById('from');
+var to = document.getElementById('to');
 
-shareButton.addEventListener("click", function(){
-     share.push(currentSlide);
-});
 
-function sendMail(){
-    var body = share;
-    window.location.href = "mailto:mail@example.org?subject=FromKV request&body="+body;
-}
+// shareButton.addEventListener("click", function(){
+//      share.push(currentSlide);
+// });
+
+// function sendMail(){
+//     if (share == 0){
+//         var body = ...
+//         var fileName = "Slide0.png"
+//     } else if (share == 1){
+//         var body = ...
+//         var fileName = "Slide1.png"
+//     } else if (share == 2){
+//         var body = ...
+//         var fileName = "Slide2.png"
+//     } else if (share == 3){
+//         var body = ...
+//         var fileName = "Slide3.png"
+//     } else if (share == 4){
+//         var body = ...
+//         var fileName = "Slide4.png"
+//     } else if (share == 5){
+//         var body = ...
+//         var fileName = "Slide5.png"
+//     } else if (share == 6){
+//         var body = ...
+//         var fileName = "Slide6.png"
+//     } else if (share == 7){
+//         var body = ...
+//         var fileName = "Slide7.png"
+//     } else if (share == 8){
+//         var body = ...
+//         var fileName = "Slide8.png"
+//     } else{
+//         console.log("Something Went Wrong...")
+//     }
+//     window.location.href = "mailto:kghumaan@umail.iu.edu?subject=FromKV request&body="+body;
+// }
+// var toEmailString = JSON.stringify(to);
+
+// var obj = JSON.parse('{
+//   "Message": {
+//     "Subject": "Check this out!",
+//     "Body": {
+//       "ContentType": "Text",
+//       "Content": "Think you might find this interesting - Sent from Ares Kiosk!"
+//     },
+//     "ToRecipients": [
+//       {
+//         "EmailAddress": {
+//           "Address": toEmailString,
+//         }
+//       }
+//     ],
+//     "Attachments": [
+//       {
+//         "@odata.type": "#Microsoft.OutlookServices.FileAttachment",
+//         "Name": fileName,
+//         "ContentBytes": "bWFjIGFuZCBjaGVlc2UgdG9kYXk="
+//       }
+//     ]
+//   }}');
+// var len = shares.length;
+
+// for (i = 0; i < len; i++) {
+//     var photo = slides[i];
+//     // do something with the photo
+//     var x = photo / 9
+//     if (x > 1){
+
+//     }
+// } 
+
+
 
 //PDF Modal
 var Sign = document.getElementById('pausePlayImg');

@@ -190,7 +190,7 @@ Slides appearance
     margin: auto;
     padding: 10px;
     padding-top: 0px;
-    border: 1px solid #888;
+    border: 3px solid #00498A;
     width: 80vw;
     height: 100vh;
 }
@@ -220,7 +220,7 @@ Slides appearance
     /*...*/
     text-align: center;
     padding: 10px;
-    border: 1px solid #888;
+    border: 3px solid #00498A;
     width: 60vw;
     height: 20vh;
 }
@@ -282,7 +282,7 @@ Slides appearance
     /*...*/
     text-align: center;
     padding: 10px;
-    border: 1px solid #888;
+    border: 3px solid #00498A;
     width: 60vw;
     height: 30vh;
 }
