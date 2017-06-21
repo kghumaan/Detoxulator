@@ -230,6 +230,8 @@ noButton.onclick = function(){
 }
 closeShare.onclick = function(){
     shareModal.style.display = "none";
+    clearTimeout(resumeSlideshow);
+    clearTimeout(alertQ);
     clearInterval(slideInterval);
     playSlideshow();
 }
