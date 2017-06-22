@@ -18,6 +18,8 @@ fullscreenButton.addEventListener('click', function(){
         element.mozRequestFullScreen();
     }else if(element.msRequestFullscreen){
         element.msRequestFullscreen();
+    } else{
+        element.webkitEnterFullscreen();
     }
 });
 function disappear(){
