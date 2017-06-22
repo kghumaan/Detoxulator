@@ -8,24 +8,35 @@ var present = true;
 var share = [];
 var element = document.getElementById('element');
 var fullscreenButton = document.getElementById('fullscreenButton');
+var elem = document.getElementById("myvideo");
 
-fullscreenButton.addEventListener('click', function(){
-    if(element.requestFullscreen){
-        element.requestFullscreen();
-    }else if(element.webkitRequestFullscreen){
-        element.webkitRequestFullscreen();
-    }else if(element.mozRequestFullScreen){
-        element.mozRequestFullScreen();
-    }else if(element.msRequestFullscreen){
-        element.msRequestFullscreen();
-    } else{
-        element.webkitEnterFullscreen();
-    }
-});
-function disappear(){
-    // fullscreenButton.style.display = "none";
-    element.webkitEnterFullscreen();
-}
+// fullscreenButton.addEventListener('click', function(){
+//     if (element.requestFullscreen) {
+//         element.requestFullscreen();
+//     }
+// });
+// function goFullScreen(){
+//     element.webkitEnterFullscreen();
+//     console.log("fullscreen button pressed");
+// }
+
+// fullscreenButton.addEventListener('click', function(){
+//     if(element.requestFullscreen){
+//         element.requestFullscreen();
+//     }else if(element.webkitRequestFullscreen){
+//         element.webkitRequestFullscreen();
+//     }else if(element.mozRequestFullScreen){
+//         element.mozRequestFullScreen();
+//     }else if(element.msRequestFullscreen){
+//         element.msRequestFullscreen();
+//     } else{
+//         element.webkitEnterFullscreen();
+//     }
+// });
+// function disappear(){
+//     // fullscreenButton.style.display = "none";
+//     element.webkitEnterFullscreen();
+// }
 //Controls
 var pauseButton = document.getElementById('pause');
 var backButton = document.getElementById('back');

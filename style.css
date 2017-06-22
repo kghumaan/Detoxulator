@@ -348,6 +348,7 @@ Slides appearance
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     /*...*/
+    border: 3px solid #00498A;
     width: 30vw; /* Full width */
     height: 8vh; /* Full height */
     overflow: auto; /* Enable scroll if needed */
