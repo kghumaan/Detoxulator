@@ -33,6 +33,21 @@ var forwardButton = document.getElementById('forward');
 var shareButton = document.getElementById('share');
 var from = document.getElementById('from');
 var to = document.getElementById('to');
+var thanks = document.getElementById('thanks');
+
+function sent(){
+    console.log("sent button pressed");
+    shareModal.style.display = "none";
+    thanks.style.display = "block";
+    setTimeout(goAway,1000);
+    clearTimeout(resumeSlideshow);
+    clearTimeout(alertQ);
+    clearInterval(slideInterval);
+    playSlideshow();
+}
+function goAway(){
+    thanks.style.display = "none";
+}
 
 // shareButton.addEventListener("click", function(){
 //      share.push(currentSlide);

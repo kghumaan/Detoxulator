@@ -5,6 +5,7 @@
       <!-- CSS -->
       <link rel="stylesheet" type="text/css" href="style.css"/>
       <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
 </head>
    <body id="element">
@@ -92,6 +93,10 @@
           <button class="alertAnswers" id="no">No</button>
         </div>
       </div>
+      <!-- Thanks Modal -->
+      <div id="thanks" class="thanks">
+          <p><b>Sent!</b></p>
+      </div>
       <!-- Share Modal -->
       <div id="shareModal" class="shareModal">
         <!-- Share content -->
@@ -109,7 +114,7 @@
             </div> &nbsp; 
             <input class="mailInputs" id="to" type="text">
             <br><br>
-            <input class="mailButtons" id="submit" onclick="sendMail()" type="submit" value="SUBMIT">&nbsp; 
+            <input class="mailButtons" id="submit" onclick="sent()" type="submit" value="SUBMIT">&nbsp; 
             <input class="mailButtons" id="submit" type="reset" value="RESET">
         </div>
       </div>

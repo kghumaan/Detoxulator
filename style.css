@@ -336,3 +336,19 @@ Slides appearance
   transform: translateY(1px);
   box-shadow: 0 1px 0 #F48229;
 }
+/* After Email is Sent */
+.thanks {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 15; /* Sit on top */
+    color: black;
+    background: white;
+    /*for vertical align*/
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    /*...*/
+    width: 30vw; /* Full width */
+    height: 8vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
