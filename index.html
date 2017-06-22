@@ -4,8 +4,9 @@
       <!--<link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">-->
       <!-- CSS -->
       <link rel="stylesheet" type="text/css" href="style.css"/>
+      <meta name="apple-mobile-web-app-capable" content="yes">
    </head>
-   <body>
+   <body id="element">
       <ul id="slides">
         <li class="slide showing" id="slide1">
           <div id="bg">
@@ -112,6 +113,9 @@
         </div>
       </div>
       <!--CONTROLS-->
+      <button class="fullscreen" id="fullscreenButton" onClick="disappear()">
+        GO FULLSCREEN
+      </button>
       <button class="back" id="back">
         <img src="Images/left.png" alt="back" style="width: .8em; height: 1em;">
       </button>
@@ -125,6 +129,11 @@
         <img src="Images/share.png" alt="share" style="width: 1.7em; height: 1.7em;">
       </button>
       <!-- JS -->
+      <!--<script>
+      (function() {
+        window.scrollTo(0,1);
+      })();      
+      </script>-->
       <script src="script.js"></script>
    </body>
 </html>

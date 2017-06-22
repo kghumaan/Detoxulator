@@ -59,7 +59,8 @@ Buttons appearance
 */
 .back,
 .controls,
-.forward{
+.forward,
+.fullscreen{
     position: fixed;
     top: 2%;
     z-index: 3;
@@ -69,6 +70,7 @@ Buttons appearance
     border: 1px solid #F48229;
     box-shadow: 0 2px 0 #F48229;
     cursor: pointer;
+    color: white;
 }
 .share{
     position: fixed;
@@ -84,7 +86,8 @@ Buttons appearance
 }
 .controls:active,
 .forward:active,
-.back:active{
+.back:active,
+.fullscreen:active{
   transform: translateY(1px);
   box-shadow: 0 1px 0 #F48229;
 }
@@ -92,7 +95,10 @@ Buttons appearance
     transform: translateY(1px);
     box-shadow: 0 1px 0 #00498A;
 }
-
+.fullscreen{
+    padding: 1%;
+    left: 5%;
+}
 .back{
     padding: 1%;
     right: 18%;

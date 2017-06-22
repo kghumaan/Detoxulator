@@ -6,7 +6,15 @@ var playing = true;
 var modalOpen = false;
 var present = true;
 var share = [];
+var element = document.getElementById('element');
+var fullscreenButton = document.getElementById('fullscreenButton');
 
+fullscreenButton.addEventListener('click', function(){
+    element.webkitRequestFullscreen();
+});
+function disappear(){
+    fullscreenButton.style.display = "none";
+}
 //Controls
 var pauseButton = document.getElementById('pause');
 var backButton = document.getElementById('back');
@@ -14,7 +22,6 @@ var forwardButton = document.getElementById('forward');
 var shareButton = document.getElementById('share');
 var from = document.getElementById('from');
 var to = document.getElementById('to');
-
 
 // shareButton.addEventListener("click", function(){
 //      share.push(currentSlide);
@@ -192,15 +199,19 @@ pauseButton.onclick = function(){
     if(playing){ 
     pauseSlideshow();
     resumeSlideshow = setTimeout(closeAndPlaySlideshow,12000);
+    console.log("pause button pressed");
     } else{ 
     playSlideshow();
+    console.log("play button pressed");
     }
 };
 forwardButton.onclick = function(){
     nextSlide();
+    console.log("forward button pressed");
 };
 backButton.onclick = function(){
     previousSlide();
+    console.log("back button pressed");
 };
 shareButton.onclick = function(){
     shareModal.style.display = "block";
