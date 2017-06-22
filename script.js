@@ -10,7 +10,15 @@ var element = document.getElementById('element');
 var fullscreenButton = document.getElementById('fullscreenButton');
 
 fullscreenButton.addEventListener('click', function(){
-    element.webkitRequestFullscreen();
+    if(element.requestFullscreen){
+        element.requestFullscreen();
+    }else if(element.webkitRequestFullscreen){
+        element.webkitRequestFullscreen();
+    }else if(element.mozRequestFullScreen){
+        element.mozRequestFullScreen();
+    }else if(element.msRequestFullscreen){
+        element.msRequestFullscreen();
+    }
 });
 function disappear(){
     fullscreenButton.style.display = "none";
