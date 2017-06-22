@@ -59,6 +59,15 @@ function sent(){
 function goAway(){
     thanks.style.display = "none";
 }
+// When ready...
+window.addEventListener("load",function() {
+	// Set a timeout...
+	setTimeout(function(){
+		// Hide the address bar!
+		window.scrollTo(0, 1);
+	}, 0);
+    console.log("loaded");
+});
 
 // shareButton.addEventListener("click", function(){
 //      share.push(currentSlide);
