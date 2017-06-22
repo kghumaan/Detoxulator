@@ -18,10 +18,10 @@ fullscreenButton.addEventListener('click', function(){
         element.mozRequestFullScreen();
     }else if(element.msRequestFullscreen){
         element.msRequestFullscreen();
-    }element.webkitEnterFullscreen()
+    }
 });
 function disappear(){
-    fullscreenButton.style.display = "none";
+    // fullscreenButton.style.display = "none";
     element.webkitEnterFullscreen();
 }
 //Controls
