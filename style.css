@@ -350,6 +350,6 @@ Slides appearance
     /*...*/
     border: 3px solid #00498A;
     width: 30vw; /* Full width */
-    height: 8vh; /* Full height */
+    height: 6vh; /* Full height */
     overflow: auto; /* Enable scroll if needed */
 }
