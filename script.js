@@ -10,33 +10,6 @@ var element = document.getElementById('element');
 var fullscreenButton = document.getElementById('fullscreenButton');
 var elem = document.getElementById("myvideo");
 
-// fullscreenButton.addEventListener('click', function(){
-//     if (element.requestFullscreen) {
-//         element.requestFullscreen();
-//     }
-// });
-// function goFullScreen(){
-//     element.webkitEnterFullscreen();
-//     console.log("fullscreen button pressed");
-// }
-
-// fullscreenButton.addEventListener('click', function(){
-//     if(element.requestFullscreen){
-//         element.requestFullscreen();
-//     }else if(element.webkitRequestFullscreen){
-//         element.webkitRequestFullscreen();
-//     }else if(element.mozRequestFullScreen){
-//         element.mozRequestFullScreen();
-//     }else if(element.msRequestFullscreen){
-//         element.msRequestFullscreen();
-//     } else{
-//         element.webkitEnterFullscreen();
-//     }
-// });
-// function disappear(){
-//     // fullscreenButton.style.display = "none";
-//     element.webkitEnterFullscreen();
-// }
 //Controls
 var pauseButton = document.getElementById('pause');
 var backButton = document.getElementById('back');
@@ -59,15 +32,6 @@ function sent(){
 function goAway(){
     thanks.style.display = "none";
 }
-// When ready...
-window.addEventListener("load",function() {
-	// Set a timeout...
-	setTimeout(function(){
-		// Hide the address bar!
-		window.scrollTo(0, 1);
-	}, 0);
-    console.log("loaded");
-});
 
 // shareButton.addEventListener("click", function(){
 //      share.push(currentSlide);
@@ -207,13 +171,13 @@ function previousSlide(){
 //Start and Pause functions
 
 function pauseSlideshow(){
-    Sign.src = "Images/play.png"
+    Sign.src = "play.png"
     playing = false;
     clearInterval(slideInterval);
 }
 
 function playSlideshow(){
-    Sign.src = "Images/pause.png" 
+    Sign.src = "pause.png" 
     playing = true;
     slideInterval = setInterval(nextSlide,6000);
 }
